@@ -21,7 +21,7 @@ development:
   database: raceweb_auth_development
   pool: 5
   username: root
-  password: 1mp0nab1k3
+  password:
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
