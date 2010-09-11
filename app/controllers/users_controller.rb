@@ -13,10 +13,26 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.xml
   def show
-    @user = User.find(params[:id])
+    if params[:id]
+      @user = User.find(params[:id])
+    elsif
+      @user = User.find_by_user_name_and_password(params[:user_name], params[:password])
+      logger.info("found with #{params[:user_name]} and #{params[:password]}: #{user}")
+    end
 
     respond_to do |format|
       format.html # show.html.erb
+      format.xml  { render :xml => @user }
+    end
+  end
+  
+  # GET /users/find
+  # GET /users/find.xml
+  def find
+    @user = User.find_by_user_name_and_password(params[:user_name], params[:password])
+
+    respond_to do |format|
+      format.html { render :partial => 'user' }
       format.xml  { render :xml => @user }
     end
   end

@@ -9,15 +9,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100825195927) do
+ActiveRecord::Schema.define(:version => 20100910181554) do
+
+  create_table "addresses", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "address"
+    t.string   "street"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "zip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "user_name"
     t.string   "password"
-    t.string   "mail_url"
-    t.string   "banking_url"
-    t.string   "map_center"
     t.integer  "authority"
     t.date     "born_on"
     t.datetime "last_login_at"
