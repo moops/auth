@@ -1,17 +1,15 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
 one:
-  address: MyString
-  street: MyString
-  city: MyString
-  state: MyString
-  country: MyString
-  zip: MyString
+ user_id: users(:adam).id
+ address: 129 gorge rd e
+ city: victoria
+ state: bc
+ country: canada
+ zip: v9a1l1
 
 two:
-  address: MyString
-  street: MyString
-  city: MyString
-  state: MyString
-  country: MyString
-  zip: MyString
+ user_id: users(:quinn).id
+ address: 123 fake st
+ city: victoria
+ state: bc
+ country: canada
+ zip: v0b2p6

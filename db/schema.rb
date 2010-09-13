@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(:version => 20100910181554) do
   create_table "addresses", :force => true do |t|
     t.integer  "user_id"
     t.string   "address"
-    t.string   "street"
     t.string   "city"
     t.string   "state"
     t.string   "country"

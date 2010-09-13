@@ -7,7 +7,7 @@
 #   Major.create(:name => 'Daley', :city => cities.first)
 
 
-adam = User.create({ :id => 1, :name => 'Adam Lawrence', :user_name => 'adam', :password => 'adam', :authority => 1, :born_on => '1969-07-09'})
+adam = User.create({ :id => 1, :name => 'adam lawrence', :user_name => 'adam', :password => 'pass', :authority => 1, :born_on => '1969-07-09'})
 
-addr = Address.create({ :id => 1, :user_id => 1, :address => '123 fake st', :city => 'victoria', :state => 'bc', :country => 'canada', :zip => 'v9a1l1'})
+addr = Address.create({ :id => 1, :user_id => 1, :address => '129 gorge rd e', :city => 'victoria', :state => 'bc', :country => 'canada', :zip => 'v9a1l1'})
 
