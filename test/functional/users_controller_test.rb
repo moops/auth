@@ -11,6 +11,11 @@ class UsersControllerTest < ActionController::TestCase
     get :new
     assert_response :success
   end
+  
+  test "should find the user" do
+    get :find, {'user_name' => 'adam', password => 'adam_pass'}
+    assert_response :success
+  end
 
   test "should create user" do
     assert_difference('User.count') do

@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   # GET /users/find
   # GET /users/find.xml
   def find
-    @user = User.find_by_user_name_and_password(params[:user_name], params[:password])
+    @user = User.authenticate(params[:user_name], params[:password])
 
     respond_to do |format|
       format.html { render :partial => 'user' }

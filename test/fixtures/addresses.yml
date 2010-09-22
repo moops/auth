@@ -1,15 +1,15 @@
 one:
- user_id: users(:adam).id
- address: 129 gorge rd e
- city: victoria
- state: bc
- country: canada
- zip: v9a1l1
+  user_id: adam
+  address: 129 gorge rd e
+  city: victoria
+  state: bc
+  country: canada
+  zip: v9a1l1
 
 two:
- user_id: users(:quinn).id
- address: 123 fake st
- city: victoria
- state: bc
- country: canada
- zip: v0b2p6
+  user_id: quinn
+  address: 123 fake st
+  city: victoria
+  state: bc
+  country: canada
+  zip: v0b2p6
