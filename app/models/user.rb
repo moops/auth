@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
 
   def self.authenticate(name, password)
     p = User.find_by_user_name(name)
-    logger
     p and p.hashed_password == Digest::SHA2.hexdigest(p.salt + password) ? p : nil
   end
     

@@ -28,11 +28,11 @@ class UsersController < ApplicationController
   
   # GET /users/find
   # GET /users/find.xml
-  def find
+  def find    
     @user = User.authenticate(params[:user_name], params[:password])
 
     respond_to do |format|
-      format.html { render :partial => 'user' }
+      format.html { redirect_to(@user) }
       format.xml  { render :xml => @user }
     end
   end
