@@ -33,7 +33,11 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(@user) }
-      format.xml  { render :xml => @user }
+      format.xml  { 
+        logger.info('format is xml')
+        logger.info("@user #{@user.inspect}")
+        render :xml => @user 
+      }
     end
   end
 
