@@ -25,11 +25,14 @@ class UsersController < ApplicationController
   # GET /users/find.xml
   def find    
     @user = User.authenticate(params[:user_name], params[:password])
-    logger.debug("UsersController.find: @user[#{@user}]")
+    logger.debug("UsersController.find: @user[#{@user.inspect}]")
 
     respond_to do |format|
       format.html { redirect_to(@user) }
-      format.xml  { render :xml => (@user ? @user : '') }
+      format.xml  { 
+        logger.info('sending xml')
+        render :xml => (@user ? @user : '') 
+      }
     end
   end
 
