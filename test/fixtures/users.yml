@@ -1,19 +1,44 @@
-adam:
-  name: adam lawrence
-  user_name: adam
-  # hashed from 'adam_pass'
-  hashed_password: 72f919ce1a839f2383e60b488469553ef8d504c6cb6fb143088115dd68fe5201
-  salt: EnN47qy8Uk0=
-  authority: 1
-  born_on: <%= 41.years.ago.to_date.to_s(:db) %>
-  
 quinn:
-  name: quinn lawrence
+  first_name: quinn
+  last_name: lawrence
   user_name: quinn
   # hashed from 'quinn_pass'
   hashed_password: d699c5dc74fb69c3140ba86962aaa8394181609d4e6af24538debbb7dbfd134a
   salt: zV0WJXeibuE=
+  gender: 10
   authority: 1
-  born_on: <%= 14.years.ago.to_date.to_s(:db) %>
+  born_on: <%= 15.years.ago.to_date.to_s(:db) %>
   
+adam:
+  first_name: adam
+  last_name: lawrence
+  user_name: adam
+  # hashed from 'adam_pass'
+  hashed_password: 72f919ce1a839f2383e60b488469553ef8d504c6cb6fb143088115dd68fe5201
+  salt: EnN47qy8Uk0=
+  gender: 10
+  authority: 1
+  born_on: <%= 41.years.ago.to_date.to_s(:db) %>
+
+bertrand:
+  first_name: bertrand
+  last_name: bozek
+  user_name: bertrand
+  # hashed from 'adam_pass'
+  hashed_password: 72f919ce1a839f2383e60b488469553ef8d504c6cb6fb143088115dd68fe5201
+  salt: EnN47qy8Uk0=
+  gender: 10
+  authority: 1
+  born_on: <%= 49.years.ago.to_date.to_s(:db) %>
+
+gary:
+  first_name: gary
+  last_name: duncan
+  user_name: gary
+  # hashed from 'adam_pass'
+  hashed_password: 72f919ce1a839f2383e60b488469553ef8d504c6cb6fb143088115dd68fe5201
+  salt: EnN47qy8Uk0=
+  gender: 10
+  authority: 1
+  born_on: <%= 55.years.ago.to_date.to_s(:db) %>
   
