@@ -12,10 +12,29 @@
 
 ActiveRecord::Schema.define(:version => 20100910181554) do
 
-# Could not dump table "addresses" because of following ArgumentError
-#   invalid date
+  create_table "addresses", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "zip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
-# Could not dump table "users" because of following ArgumentError
-#   invalid date
+  create_table "users", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "user_name"
+    t.string   "hashed_password"
+    t.string   "salt"
+    t.integer  "gender"
+    t.integer  "authority"
+    t.date     "born_on"
+    t.datetime "last_login_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
