@@ -1,15 +1,16 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
+gem 'rails', '>=3.0.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
+#gem 'mysql2'
+gem 'pg'
 
 # Use unicorn as the web server
 # gem 'unicorn'
-gem 'mongrel', '>=1.1.5'
+# gem 'mongrel', '>=1.1.5'
 
 # Deploy with Capistrano
 # gem 'capistrano'
