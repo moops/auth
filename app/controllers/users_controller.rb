@@ -2,7 +2,12 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
   def index
-    @users = User.all
+    if (!params[:user_name].blank? and  !params[:password].blank?)
+      @users = Array.new
+      @users << User.authenticate(params[:user_name], params[:password])
+    else
+      @users = User.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -18,21 +23,6 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @user }
-    end
-  end
-  
-  # GET /users/find
-  # GET /users/find.xml
-  def find    
-    @user = User.authenticate(params[:user_name], params[:password])
-    logger.debug("UsersController.find: @user[#{@user.inspect}]")
-
-    respond_to do |format|
-      format.html { redirect_to(@user) }
-      format.xml  { 
-        logger.info('sending xml')
-        render :xml => (@user ? @user : '') 
-      }
     end
   end
 

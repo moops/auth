@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   validates_presence_of :name, :user_name, :salt, :hashed_password
 
   def self.authenticate(name, password)
+    logger.info("### user.authenticate name: #{name}, password: #{password}")
     p = User.find_by_user_name(name)
     p and p.hashed_password == Digest::SHA2.hexdigest(p.salt + password) ? p : nil
   end
