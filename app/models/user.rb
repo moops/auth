@@ -3,7 +3,7 @@ require 'digest/sha2'
 class User < ActiveRecord::Base
 
   has_one :address
-  validates_presence_of :name, :user_name, :salt, :hashed_password
+  validates_presence_of :first_name, :last_name, :user_name
 
   def self.authenticate(name, password)
     logger.info("### user.authenticate name: #{name}, password: #{password}")
