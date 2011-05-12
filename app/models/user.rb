@@ -4,6 +4,11 @@ class User < ActiveRecord::Base
 
   has_one :address
   validates_presence_of :first_name, :last_name, :user_name
+  
+  def initialize(fields)
+    hashed_password = Digest::SHA2.hexdigest("EnN47qy8Uk0=#{fields['password']}")
+    super({:first_name => fields[:first_name], :last_name => fields[:last_name], :user_name => fields[:user_name], :born_on => fields[:born_on], :salt => 'EnN47qy8Uk0=', :hashed_password => hashed_password, :authority => fields[:authority]})
+  end
 
   def self.authenticate(name, password)
     logger.info("### user.authenticate name: #{name}, password: #{password}")
